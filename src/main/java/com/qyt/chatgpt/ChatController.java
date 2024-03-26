@@ -1,5 +1,6 @@
 package com.qyt.chatgpt;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,16 +15,19 @@ public class ChatController {
         return "index";
     }
 
+//    @PostMapping("/chat")
+//    public String chat(@RequestParam("message") String message, Model model) {
+//        String response = OpenAIAPI.chat(message);
+//        model.addAttribute("message", message);
+//        model.addAttribute("response", response);
+//        return "index";
+//    }
     @PostMapping("/chat")
-    public String chat(@RequestParam("message") String message, Model model) {
+    public ResponseEntity<String> chat(@RequestParam("message") String message, Model model) {
         String response = OpenAIAPI.chat(message);
         model.addAttribute("message", message);
         model.addAttribute("response", response);
-        return "index";
-    }
-    public String chat(String question) {
-        String response = OpenAIAPI.chat(question);
-        return response;
+        return ResponseEntity.ok(response);
     }
 }
 
