@@ -1,0 +1,105 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Chat with OpenAI</title>-->
+<!--  <style>-->
+<!--    body {-->
+<!--      text-align: center; /* 设置整个页面的文本居中 */-->
+<!--    }-->
+<!--    h3 {-->
+<!--      text-align: left; /* 将h3元素内文本左对齐 */-->
+<!--      margin: 0 auto; /* 将h3元素水平居中 */-->
+<!--      max-width: 600px; /* 设置最大宽度以避免过宽 */-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Chat with OpenAI</h1>-->
+<!--<form action="/chat" method="post">-->
+<!--  <label for="message">请输入你的问题:</label><br>-->
+<!--  <input type="text" id="message" name="message">-->
+<!--  <button type="submit">发送</button>-->
+<!--</form>-->
+<!--<hr>-->
+<!--<h3>我说: <span th:text="${message}"></span></h3>-->
+<!--<h3>AI回复: <span th:text="${response}"></span></h3>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Chat with OpenAI</title>-->
+<!--  <style>-->
+<!--    body {-->
+<!--      text-align: center; /* 设置整个页面的文本居中 */-->
+<!--    }-->
+<!--    h1 {-->
+<!--      margin-bottom: 20px; /* 增加标题与表单之间的间距 */-->
+<!--    }-->
+<!--    form {-->
+<!--      margin-bottom: 20px; /* 增加表单与历史记录之间的间距 */-->
+<!--    }-->
+<!--    .chat-container {-->
+<!--      max-width: 600px;-->
+<!--      margin: 0 auto;-->
+<!--      text-align: left;-->
+<!--    }-->
+<!--    .clear-button {-->
+<!--      padding: 5px 10px;-->
+<!--      background-color: #f00;-->
+<!--      color: #fff;-->
+<!--      border: none;-->
+<!--      cursor: pointer;-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Chat with OpenAI</h1>-->
+<!--<form id="chatForm" action="/chat" method="post">-->
+<!--  <label for="message">请输入你的问题:</label><br>-->
+<!--  <input type="text" id="message" name="message">-->
+<!--  <button type="submit">发送</button>-->
+<!--</form>-->
+<!--<hr>-->
+<!--<div class="chat-container" id="chatHistory"></div>-->
+<!--<button class="clear-button" onclick="clearHistory()">清空历史记录</button>-->
+
+<!--<script src="controller.js">-->
+<!--  function saveToLocalStorage(message, response) {-->
+<!--    let chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];-->
+<!--    chatHistory.push({ message: message, response: response });-->
+<!--    localStorage.setItem('chatHistory', JSON.stringify(chatHistory));-->
+<!--  }-->
+
+<!--  function displayChatHistory() {-->
+<!--    let chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];-->
+<!--    let chatHistoryDiv = document.getElementById('chatHistory');-->
+<!--    chatHistoryDiv.innerHTML = '';-->
+<!--    chatHistory.forEach(item => {-->
+<!--      chatHistoryDiv.innerHTML += `<p><strong>我说:</strong> ${item.message}</p><p><strong>AI回复:</strong> ${item.response}</p>`;-->
+<!--    });-->
+<!--  }-->
+
+<!--  function clearHistory() {-->
+<!--    localStorage.removeItem('chatHistory');-->
+<!--    displayChatHistory();-->
+<!--  }-->
+
+<!--  document.getElementById('chatForm').addEventListener('submit', function(e) {-->
+<!--    e.preventDefault();-->
+<!--    const message = document.getElementById('message').value;-->
+<!--    document.getElementById('message').value = ''; // 清空输入框-->
+<!--    const response = ChatController.chat(message); // 这里应该是从 AI 返回的内容-->
+<!--    saveToLocalStorage(message, response);-->
+<!--    displayChatHistory();-->
+<!--  });-->
+
+<!--  displayChatHistory();-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
