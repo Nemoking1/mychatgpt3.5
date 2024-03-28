@@ -1,0 +1,58 @@
+body {
+    padding-top: 50px;
+    background-image: url('../img/chineseMountain.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 让背景图片固定不随页面滚动 */
+}
+.form-control::placeholder{
+    opacity: 0.5 !important;
+}
+.chat-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label.form-label {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #724940;
+    padding-bottom: 5px;
+    margin-left: 20px;
+}
+
+label.form-label::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ea9293;
+    transform: rotate(45deg);
+    top: 4px;
+    left: -20px;
+    z-index: -1;
+}
+
+.btn-green {
+    background-color: #ea9293;
+    border-color: #ea9293;
+}
+
+.btn-red {
+    background-color: #724940;
+    border-color: #724940;
+}
+#chatHistory {
+    height: 550px; /* 设置高度，超出部分将出现滚动条 */
+    overflow-y: scroll; /* 显示垂直滚动条 */
+}
