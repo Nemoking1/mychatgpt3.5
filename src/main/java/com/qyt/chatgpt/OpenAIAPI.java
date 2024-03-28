@@ -72,11 +72,5 @@ public class OpenAIAPI {
 
         return fixedXml.toString();
     }
-
-    public static void main(String[] args) {
-        //System.out.println(chat("how to build a wooden spoon in 3 short steps? give as short as answer as possible in chinese"));
-        System.out.println(chat("how to love a woman? give as short as answer as possible in chinese"));
-
-    }
 }
 
