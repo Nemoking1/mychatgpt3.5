@@ -15,18 +15,20 @@ import java.util.regex.Pattern;
 
 @UtilityClass
 public class OpenAIAPI {
+
     /**
      * 聊天端点
      */
     String chatEndpoint = "https://gateway.ai.cloudflare.com/v1/d4777cc628d2c868dea7325104836c9f/qyt/openai/chat/completions";
+
     /**
      * api密匙
      */
     String apiKey = "Bearer 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";
 
     /**
-     * 发送消息
      *
+     * 发送消息
      * @param txt 内容
      * @return {@link String}
      */
@@ -69,7 +71,6 @@ public class OpenAIAPI {
             matcher.appendReplacement(fixedXml, "&amp;");
         }
         matcher.appendTail(fixedXml);
-
         return fixedXml.toString();
     }
 }
