@@ -22,7 +22,7 @@ public class OpenAIAPI {
     /**
      * api密匙
      */
-    String apiKey = "Bearer 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";
+    String apiKey = "Bearer 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";//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";
 
     /**
      * 发送消息
